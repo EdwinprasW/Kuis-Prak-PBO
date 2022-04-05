@@ -21,7 +21,7 @@ public class KuisPrak {
          Scanner input = new Scanner(System.in);
          Scanner instring = new Scanner(System.in);
          int pilih = 1;        
-         int tt = 0, tc = 0 , ww = 0, nik = 0;
+             float tt = 0, tc = 0 , ww = 0, nik = 0;
              String nama;
          
          
@@ -43,15 +43,15 @@ public class KuisPrak {
             System.out.println(" Form Pendaftaran ");
             System.out.println("");
             System.out.print("Input NIK : ");
-            nik = input.nextInt();
+            nik = input.nextFloat();
             System.out.print("Input Nama : ");
             nama = instring.nextLine();
             System.out.print("Input Nilai Tes Tulis : "); 
-            tt = input.nextInt();
+            tt = input.nextFloat();
             System.out.print("Input Nilai Tes Coding : ");
-            tc = input.nextInt();
+            tc = input.nextFloat();
             System.out.print("Input Nilai Tes Wawancara : ");
-            ww = input.nextInt();
+            ww = input.nextFloat();
             
             AndroidDev andro = new AndroidDev(tc, ww, tt, nik, nama);
             andro.andromenu();
@@ -62,15 +62,15 @@ public class KuisPrak {
             System.out.println(" Form Pendaftaran ");
             System.out.println("");
             System.out.print("Input NIK : ");
-            nik = input.nextInt();
+            nik = input.nextFloat();
             System.out.print("Input Nama : ");
             nama = instring.nextLine();
             System.out.print("Input Nilai Tes Tulis : "); 
-            tt = input.nextInt();
+            tt = input.nextFloat();
             System.out.print("Input Nilai Tes Coding : ");
-            tc = input.nextInt();
+            tc = input.nextFloat();
             System.out.print("Input Nilai Tes Wawancara : ");
-            ww = input.nextInt();
+            ww = input.nextFloat();
             
             WebDev web = new WebDev(tc, ww, tt, nik, nama);
             web.webmenu();

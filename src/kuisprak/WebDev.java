@@ -11,12 +11,12 @@ import java.util.Scanner;
  *
  * @author User
  */
-public class WebDev implements HitungNilai{
-    private int tc, ww, tt, nik;
+public class WebDev extends Menu implements HitungNilai{
+    private float tc, ww, tt, nik;
     private String nama;
     Scanner input = new Scanner(System.in);
 
-    public WebDev(int tc, int ww, int tt, int nik, String nama) {
+    public WebDev(float tc, float ww, float tt, float nik, String nama) {
         this.tc = tc;
         this.ww = ww;
         this.tt = tt;
@@ -37,10 +37,10 @@ public class WebDev implements HitungNilai{
         switch (pilih) {
         
             case 1 : 
-                webedit();
+                EditNilai();
             
             case 2 :
-                webtampil();
+                TampilkanNilai();
                 
             case 3 :
                 System.exit(0);
@@ -49,22 +49,23 @@ public class WebDev implements HitungNilai{
         
     }
      
-      public void webedit(){
+    @Override
+      public void EditNilai(){
     System.out.println("Form Edit");
     System.out.println("");
     System.out.print("Input Nilai Tes Tulis : "); 
-    tt = input.nextInt();
+    tt = input.nextFloat();
     setTt(tt);
     System.out.print("Input Nilai Tes Coding : ");
-    tc = input.nextInt();
+    tc = input.nextFloat();
     setTc(tc);
     System.out.print("Input Nilai Tes Wawancara : ");
-    ww = input.nextInt();
+    ww = input.nextFloat();
     setWw(ww);
     webmenu();
     }
     
-    public void webtampil(){
+    public void TampilkanNilai(){
 
         System.out.println("Nilai akhir : " + Nilai());
         if(Nilai() >= 85){
@@ -79,15 +80,15 @@ public class WebDev implements HitungNilai{
     }
     
 
-    public void setTc(int tc) {
+    public void setTc(float tc) {
         this.tc = tc;
     }
 
-    public void setWw(int ww) {
+    public void setWw(float ww) {
         this.ww = ww;
     }
 
-    public void setTt(int tt) {
+    public void setTt(float tt) {
         this.tt = tt;
     } 
 
